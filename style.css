@@ -204,8 +204,9 @@ body {
 
 .section {
   /* side padding centers a 64rem column while the section itself
-     stays full-bleed for the snap viewport and divider line */
-  padding: 5.5rem max(1.5rem, calc(50vw - 32rem)) 2.5rem;
+     stays full-bleed for the snap viewport and divider line.
+     vertical padding shrinks on short screens so content fits the snap */
+  padding: clamp(4rem, 8svh, 5.5rem) max(1.5rem, calc(50vw - 32rem)) clamp(1rem, 3svh, 2.5rem);
   border-top: 1px solid var(--line);
 }
 
@@ -291,7 +292,7 @@ body {
   font-size: 0.78rem;
   color: var(--ink) !important;
   border-bottom: 1px solid var(--line);
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
 }
 
 .tier ul { list-style: none; margin-top: auto; }

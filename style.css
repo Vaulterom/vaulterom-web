@@ -146,6 +146,9 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 2.25rem;
+  /* guaranteed gap below the buttons: the trust strip's margin-top: auto
+     collapses to 0 on shorter viewports, so it would butt into them */
+  margin-bottom: 2.5rem;
 }
 
 /* ---------- buttons ---------- */
@@ -442,6 +445,7 @@ body {
 /* ---------- small screens ---------- */
 
 @media (max-width: 600px) {
+  html { scroll-snap-type: none; } /* snapping fights free scrolling on phones */
   .nav { flex-direction: column; gap: 0.5rem; }
   .nav-links { flex-wrap: wrap; justify-content: center; }
   .hero, .section { padding-top: 8rem; } /* clear the taller stacked nav */

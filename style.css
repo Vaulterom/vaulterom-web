@@ -285,6 +285,30 @@ body {
 
 .tier.featured { border-color: var(--accent-dim); position: relative; }
 
+/* Image slot at the top of each tier card. Drop an <img> inside the
+   figure (replacing the placeholder span) when product photos exist. */
+.tier-photo {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--line);
+  border-radius: 4px;
+  background: var(--bg);
+  overflow: hidden;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+.tier-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .tier-label {
   font-family: var(--mono);
   font-size: 0.68rem;
@@ -306,13 +330,13 @@ body {
 
 .tier ul { list-style: none; margin-top: auto; }
 
-/* Align rows (label / name / spec / description / bullets) across all
-   three tier cards so the first bullet starts at the same height. */
+/* Align rows (photo / label / name / spec / description / bullets) across
+   all three tier cards so the first bullet starts at the same height. */
 @supports (grid-template-rows: subgrid) {
   .tier {
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 5;
+    grid-row: span 6;
     gap: 0.5rem;
   }
   .tier ul { margin-top: 0; }

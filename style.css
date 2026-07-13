@@ -280,6 +280,12 @@ body {
   margin-top: 0.9rem;
 }
 
+/* Case-study cards hold only a title and an attribution; the grid keeps
+   the cards equal height, and pinning attributions to the bottom keeps
+   them vertically aligned across all three. */
+#workflows .card { display: flex; flex-direction: column; }
+#workflows .card-attrib { margin-top: auto; padding-top: 1.25rem; }
+
 /* ---------- tiers ---------- */
 
 /* Compact: the three tiers + heading must fit one snap screen */
@@ -491,12 +497,13 @@ body {
 
 /* ---------- floating CTA ---------- */
 
-/* Hangs off the right edge, raised so it always clears the footer bar;
-   extra right padding keeps the label clear of the cropped edge. */
+/* Tucked into the bottom-right corner, hanging off the right edge; the
+   5px bottom gap keeps the rounded left corner fully visible. Extra
+   right padding keeps the label clear of the cropped edge. */
 .floating-cta {
   position: fixed;
   right: -10px;
-  bottom: 4.75rem;
+  bottom: 5px;
   z-index: 30;
   background: var(--accent);
   color: #fff;

@@ -521,21 +521,22 @@ body {
 
 /* ---------- footer ---------- */
 
+/* Full-bleed: the separator spans the whole page like the section
+   dividers, while the horizontal padding keeps the text aligned with
+   the content column. */
 .footer {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 2rem;
-  justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   margin-top: auto;
-  padding: 1.25rem 0;
+  margin-left: calc(50% - 50vw);
+  padding: 1.25rem max(1.5rem, calc(50vw - 32rem));
   border-top: 1px solid var(--line);
   font-family: var(--mono);
   font-size: 0.72rem;
   color: var(--muted);
 }
-
-.footer-note { color: var(--sage); }
 
 /* ---------- reveal animation ---------- */
 

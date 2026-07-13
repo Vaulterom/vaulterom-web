@@ -28,8 +28,9 @@
   const form = document.getElementById("project-form");
   if (!form) return;
 
-  // Paste your deployed backend URL here, e.g. "https://vaulterom-contact.<account>.workers.dev"
-  const FORM_ENDPOINT = "https://vaulterom-contact.workers.dev";
+  // The deployed backend URL — note the two segments before workers.dev:
+  // <worker-name>.<account-subdomain>.workers.dev
+  const FORM_ENDPOINT = "https://vaulterom-contact.vaulterom-contact.workers.dev";
 
   const status = document.getElementById("form-status");
   const button = document.querySelector('button[form="project-form"]');

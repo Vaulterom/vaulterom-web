@@ -463,31 +463,48 @@ body {
   border-color: var(--accent-dim);
 }
 
-.form-field textarea { resize: vertical; min-height: 7rem; }
+.form-field textarea { resize: vertical; min-height: 4.5rem; overflow-y: auto; }
 
-.contact-form .btn {
-  justify-self: center;
+/* Submit sits outside the form so its auto margin can center it in the
+   gap between the last field and the footer; it still submits via the
+   form="project-form" attribute. Same width as the form, so the button
+   lines up with the left edge of the text boxes. */
+.submit-row {
+  width: min(100%, 44rem);
+  margin-top: auto;
+  padding-top: 0.75rem;
+  text-align: left;
+}
+
+.submit-row .btn {
+  margin-top: 0;
   border: 0;
   cursor: pointer;
-  margin-top: 0.5rem;
+}
+
+.form-status {
+  font-family: var(--mono);
+  color: var(--sage);
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
 }
 
 /* ---------- floating CTA ---------- */
 
-/* Hangs off the bottom-right corner; extra padding keeps the label
-   clear of the cropped edges. */
+/* Hangs off the right edge, raised so it always clears the footer bar;
+   extra right padding keeps the label clear of the cropped edge. */
 .floating-cta {
   position: fixed;
   right: -10px;
-  bottom: -12px;
+  bottom: 4.75rem;
   z-index: 30;
   background: var(--accent);
   color: #fff;
   font-family: var(--mono);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.855rem;
   text-decoration: none;
-  padding: 0.9rem 2rem 1.7rem 1.6rem;
+  padding: 0.85rem 1.9rem 0.85rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
   transition: background 0.15s;

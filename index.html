@@ -265,10 +265,13 @@
       </div>
       <div class="form-field">
         <label for="project">Tell us about your project:</label>
-        <textarea id="project" name="project" rows="5"></textarea>
+        <textarea id="project" name="project" rows="3"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary btn-big">Submit</button>
     </form>
+    <div class="submit-row">
+      <button type="submit" form="project-form" class="btn btn-primary btn-big">Submit</button>
+      <p id="form-status" class="form-status" hidden></p>
+    </div>
     <footer class="footer">
       <span>© 2026 Vaulterom — Private AI, on your hardware.</span>
       <span class="footer-note">No trackers. No third-party scripts. Ever.</span>

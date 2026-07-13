@@ -1,0 +1,9 @@
+name = "vaulterom-contact"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+# Non-secret config. Set RESEND_API_KEY separately:
+#   wrangler secret put RESEND_API_KEY
+[vars]
+CONTACT_TO = "contact@vaulterom.com"
+MAIL_FROM = "Vaulterom Website <form@vaulterom.com>"

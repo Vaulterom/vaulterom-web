@@ -64,7 +64,7 @@
   <!-- ============ WHY LOCAL ============ -->
   <section class="section snap" id="why">
     <p class="kicker">// WHY LOCAL</p>
-    <h2>The cloud is someone else's computer.<br>Yours doesn't have to be.</h2>
+    <h2>The cloud is someone else's computer.</h2>
     <p class="section-intro">
       Modern AI can read, write, sort, and summarize most of the paperwork that
       slows a business down. But if your client contracts, compliance
@@ -147,10 +147,10 @@
   <!-- ============ CASE STUDIES ============ -->
   <section class="section snap" id="workflows">
     <p class="kicker">// CASE STUDIES</p>
-    <h2>Already built. Already running.</h2>
+    <h2>Previous Projects - Satisfied Customers.</h2>
     <p class="section-intro">
-      These aren't mockups. They're workflows we built for an engineering
-      firm, running today on hardware they own.
+      These aren't mockups. They're workflows we built for real clients,
+      running today on hardware they own.
     </p>
     <div class="card-grid three">
       <div class="card reveal">
@@ -159,18 +159,21 @@
         hand. Now a local AI reads the raw results and turns them into clear
         summaries and reports — without a single data point leaving the
         building.</p>
+        <p class="card-attrib">— Battery technology R&amp;D</p>
       </div>
       <div class="card reveal">
         <h3>Customer outreach drafting</h3>
         <p>A workflow that drafts personalized outreach emails from the
         firm's own notes and history. Every draft waits for a person to
         review, edit, and hit send.</p>
+        <p class="card-attrib">— Engineering services firm</p>
       </div>
       <div class="card reveal">
         <h3>Knowledge base search</h3>
         <p>Years of internal documents, searchable by asking a plain
         question. The tool pulls the answer from the firm's own files and
         shows exactly where it came from.</p>
+        <p class="card-attrib">— Biopharmaceutical lab automation firm</p>
       </div>
     </div>
     <p class="aside reveal">Your workflow won't look like these — that's the point. Tell us about the process that eats your week, and we'll tell you what we'd build.</p>
@@ -213,8 +216,8 @@
 
   <!-- ============ SECURITY ============ -->
   <section class="section snap" id="security">
-    <p class="kicker">// SECURITY POSTURE</p>
-    <h2>Down to earth means: you can point at it.</h2>
+    <p class="kicker">// WHY VAULTEROM?</p>
+    <h2>Down to earth.</h2>
     <p class="section-intro">
       Our security story isn't a whitepaper full of abstractions. It's a
       physical machine in your building that you own, can unplug, and can lock
@@ -245,7 +248,27 @@
       Tell us what it is. We'll tell you honestly whether local AI can take it
       off your plate — and which tier it would take.
     </p>
-    <a class="btn btn-primary btn-big" href="mailto:contact@vaulterom.com?subject=Vaulterom%20inquiry">Email Vaulterom</a>
+    <form class="contact-form" id="project-form">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="first-name">First name<span class="req">*</span></label>
+          <input type="text" id="first-name" name="firstName" autocomplete="given-name" required>
+        </div>
+        <div class="form-field">
+          <label for="last-name">Last name<span class="req">*</span></label>
+          <input type="text" id="last-name" name="lastName" autocomplete="family-name" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="email">Email<span class="req">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+      <div class="form-field">
+        <label for="project">Tell us about your project:</label>
+        <textarea id="project" name="project" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-big">Submit</button>
+    </form>
     <footer class="footer">
       <span>© 2026 Vaulterom — Private AI, on your hardware.</span>
       <span class="footer-note">No trackers. No third-party scripts. Ever.</span>
@@ -253,6 +276,8 @@
   </section>
 
 </main>
+
+<a class="floating-cta" href="#contact">Tell Us About Your Project</a>
 
 <script src="script.js"></script>
 </body>

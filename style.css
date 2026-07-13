@@ -90,7 +90,7 @@ body {
   border-radius: 4px;
 }
 
-.nav-cta:hover { background: var(--accent); color: var(--bg) !important; }
+.nav-cta:hover { background: var(--accent); color: #fff !important; }
 
 /* ---------- snap sections ---------- */
 
@@ -172,7 +172,7 @@ body {
 
 .btn-primary {
   background: var(--accent);
-  color: var(--bg);
+  color: #fff;
   font-weight: 700;
 }
 
@@ -219,16 +219,18 @@ body {
   border-top: 1px solid var(--line);
 }
 
+/* Kicker is the section's visual headline; the h2 below it is the subhead. */
 .kicker {
   font-family: var(--mono);
   color: var(--accent);
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  margin-bottom: 0.75rem;
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.6rem;
 }
 
 .section h2 {
-  font-size: clamp(1.5rem, 3.6vw, 2.2rem);
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
   line-height: 1.25;
   letter-spacing: -0.01em;
   max-width: 40rem;
@@ -270,6 +272,13 @@ body {
 }
 
 .card.mini p { font-size: 0.85rem; }
+
+.card-attrib {
+  font-family: var(--mono);
+  color: var(--sage) !important;
+  font-size: 0.78rem;
+  margin-top: 0.9rem;
+}
 
 /* ---------- tiers ---------- */
 
@@ -412,6 +421,80 @@ body {
 
 .contact .btn { display: inline-block; margin-top: 2rem; }
 
+/* ---------- contact form ---------- */
+
+.contact-form {
+  width: min(100%, 44rem);
+  margin: 1.5rem auto 0;
+  text-align: left;
+  display: grid;
+  gap: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-field { display: grid; gap: 0.35rem; }
+
+.form-field label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.req { color: #e5484d; }
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.65rem 0.9rem;
+  color: var(--ink);
+  font: inherit;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent-dim);
+}
+
+.form-field textarea { resize: vertical; min-height: 7rem; }
+
+.contact-form .btn {
+  justify-self: center;
+  border: 0;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* ---------- floating CTA ---------- */
+
+/* Hangs off the bottom-right corner; extra padding keeps the label
+   clear of the cropped edges. */
+.floating-cta {
+  position: fixed;
+  right: -10px;
+  bottom: -12px;
+  z-index: 30;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.9rem 2rem 1.7rem 1.6rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  transition: background 0.15s;
+}
+
+.floating-cta:hover { background: #e9a04a; }
+
 /* ---------- footer ---------- */
 
 .footer {
@@ -455,4 +538,5 @@ body {
   .nav { flex-direction: column; gap: 0.5rem; }
   .nav-links { flex-wrap: wrap; justify-content: center; }
   .hero, .section { padding-top: 8rem; } /* clear the taller stacked nav */
+  .form-row { grid-template-columns: 1fr; }
 }
